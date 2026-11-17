@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-base="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop all · Light Scribe Atelier</title>
+<meta name="description" content="Browse 877 made-to-order pieces printed with 143 channeled artworks by Morayana Levy.">
+<meta property="og:title" content="Shop all · Light Scribe Atelier">
+<meta property="og:description" content="Browse 877 made-to-order pieces printed with 143 channeled artworks by Morayana Levy.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#08070a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='24' x='6' font-size='22' fill='%23c9a86a'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+
+</head>
+<body class="">
+<div class="glow glow-a"></div>
+<div class="glow glow-b"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">Morayana Levy</span>
+      <span class="brand-sub">Light Scribe Atelier</span>
+    </a>
+    <nav class="nav"><a href="shop.html" class="active">Shop all</a>
+<a href="collections/apparel.html" class="">Wearable Art</a>
+<a href="collections/textiles.html" class="">Ritual Textiles</a>
+<a href="collections/space.html" class="">Sacred Space</a>
+<a href="fine-art.html" class="">Fine Art</a>
+<a href="healing.html" class="">Healing</a>
+<a href="about.html" class="">The Artist</a></nav>
+    <div class="header-tools">
+      <button class="icon-btn menu-btn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <button class="icon-btn" data-open-cart aria-label="Open bag">
+        <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <small>Light Scribe Atelier</small>
+  <a href="shop.html">Shop all</a>
+<a href="collections/apparel.html">Wearable Art</a>
+<a href="collections/textiles.html">Ritual Textiles</a>
+<a href="collections/space.html">Sacred Space</a>
+<a href="fine-art.html">Fine Art</a>
+<a href="healing.html">Healing</a>
+<a href="about.html">The Artist</a>
+  <button class="link-arrow close-nav" style="align-self:flex-start;margin-top:1.5rem">Close</button>
+</div>
+
+
+<section class="shop-head">
+  <div class="wrap">
+    <span class="eyebrow">The Atelier</span>
+    <h1 class="display" style="font-size:clamp(2.6rem,6vw,4.6rem);margin:0.8rem 0 1rem">Shop all pieces</h1>
+    <p class="lede">877 pieces across 143 channeled artworks — every one printed to order after you choose it.</p>
+  </div>
+</section>
+
+<div class="filters">
+  <div class="wrap filters-inner">
+    <div class="chips"><button class="chip active" data-cat="all">All</button><button class="chip" data-cat="apparel">Wearable Art<small>268</small></button><button class="chip" data-cat="textiles">Ritual Textiles<small>227</small></button><button class="chip" data-cat="space">Sacred Space<small>131</small></button><button class="chip" data-cat="carry">Carry &amp; Adorn<small>251</small></button><a class="chip" href="fine-art.html">Fine art prints</a></div>
+    <div class="filter-right">
+      <label class="search-field">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M16 16l4 4"/></svg>
+        <input id="shopSearch" type="search" placeholder="Search artwork or piece" aria-label="Search">
+      </label>
+      <div class="select-wrap">
+        <select id="shopDesign" aria-label="Filter by artwork"><option value="">All artworks</option></select>
+      </div>
+      <div class="select-wrap">
+        <select id="shopSort" aria-label="Sort">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="band-tight">
+  <div class="wrap">
+    <div class="result-line">
+      <span id="resultCount">877 pieces</span>
+      <span>Printed to order · Ships worldwide</span>
+    </div>
+    <div class="product-grid" id="shopGrid"></div>
+    <div class="empty-state hidden" id="shopEmpty">
+      <h3>Nothing carries that name</h3>
+      <p>Try another artwork or clear your filters.</p>
+    </div>
+    <div class="load-more-wrap" id="loadMoreWrap">
+      <button class="btn btn-ghost" id="loadMore">Load more pieces</button>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-mark">Morayana Levy</span>
+        <p>Intergalactic divine art channeled from realms of higher consciousness — offered in loving support of humanity's evolution.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All pieces</a></li>
+          <li><a href="collections/apparel.html">Wearable art</a></li>
+          <li><a href="collections/textiles.html">Ritual textiles</a></li>
+          <li><a href="collections/space.html">Sacred space</a></li>
+          <li><a href="collections/carry.html">Carry &amp; adorn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The Work</h4>
+        <ul>
+          <li><a href="artwork/index.html">Browse transmissions</a></li>
+          <li><a href="fine-art.html">Fine art prints</a></li>
+          <li><a href="https://www.lightscribeart.com" target="_blank" rel="noopener">Light Scribe Art gallery</a></li>
+          <li><a href="healing.html">42 Chakra Point scan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://morayana.com" target="_blank" rel="noopener">morayana.com</a></li>
+          <li><a href="https://42chakrapoint.com" target="_blank" rel="noopener">42chakrapoint.com</a></li>
+          <li><a href="mailto:contact@morayana.com">contact@morayana.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Morayana Levy · Light Scribe Atelier</span>
+      <span>All art channeled &amp; created by Morayana Levy · Made to order</span>
+    </div>
+  </div>
+</footer>
+
+<div class="drawer-scrim" id="cartScrim"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag">
+  <div class="cart-head">
+    <h2>Your bag</h2>
+    <button class="icon-btn" id="cartClose" aria-label="Close bag">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Subtotal</span><span id="cartTotal">$0.00</span></div>
+    <a class="btn btn-block" id="checkoutBtn" href="#" target="_blank" rel="noopener">Continue to checkout</a>
+    <p class="cart-note">Checkout is handled securely by Shopify. Each piece is printed to order and ships worldwide.</p>
+  </div>
+</aside>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

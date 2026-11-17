@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://morayana444.github.io/light-scribe-atelier/sitemap.xml
