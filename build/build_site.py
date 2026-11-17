@@ -153,7 +153,7 @@ def layout(
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{prefix}assets/css/site.css">
+<link rel="stylesheet" href="{prefix}assets/css/site.css?v={DATA_VERSION}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='24' x='6' font-size='22' fill='%23c9a86a'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
 {extra_head}
 </head>
@@ -246,7 +246,7 @@ def layout(
   </div>
 </aside>
 
-<script src="{prefix}assets/js/site.js"></script>
+<script src="{prefix}assets/js/site.js?v={DATA_VERSION}"></script>
 </body>
 </html>"""
 
