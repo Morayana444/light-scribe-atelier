@@ -10,6 +10,10 @@ ROOT = Path(__file__).resolve().parent.parent
 CATALOG = json.loads((ROOT / "data" / "catalog.json").read_text())
 FINE = json.loads((ROOT / "build" / "fineart.json").read_text())
 
+import hashlib
+
+DATA_VERSION = hashlib.sha1((ROOT / "data" / "catalog.json").read_bytes()).hexdigest()[:10]
+
 DESIGNS = CATALOG["designs"]
 PRODUCTS = CATALOG["products"]
 CATS = CATALOG["categories"]
@@ -136,7 +140,7 @@ def layout(
         f'<a href="{prefix}{href}">{label}</a>' for label, href in NAV
     )
     return f"""<!DOCTYPE html>
-<html lang="en" data-base="{prefix}">
+<html lang="en" data-base="{prefix}" data-v="{DATA_VERSION}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

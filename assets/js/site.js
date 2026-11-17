@@ -6,7 +6,9 @@
   "use strict";
 
   const SHOP_ORIGIN = "https://lightscribeshop.myshopify.com";
-  const BASE = document.documentElement.getAttribute("data-base") || "/";
+  const BASE_ATTR = document.documentElement.getAttribute("data-base");
+  const BASE = BASE_ATTR === null ? "/" : BASE_ATTR; // "" is valid: relative to this page
+  const DATA_VERSION = document.documentElement.getAttribute("data-v") || "";
   const u = (path) => BASE + String(path).replace(/^\//, "");
   const CART_KEY = "lsa_cart_v1";
   const money = (n) =>
@@ -17,7 +19,7 @@
 
   function loadCatalog() {
     if (catalogPromise) return catalogPromise;
-    catalogPromise = fetch(u("data/catalog.json"))
+    catalogPromise = fetch(u("data/catalog.json") + (DATA_VERSION ? "?v=" + DATA_VERSION : ""))
       .then((r) => {
         if (!r.ok) throw new Error("catalog " + r.status);
         return r.json();
