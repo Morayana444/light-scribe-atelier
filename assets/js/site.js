@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  const SHOP_ORIGIN = "https://lightscribeshop.myshopify.com";
+  const SHOP_ORIGIN = "https://www.lightscribeshop.com"; // live storefront domain (myshopify is password-gated)
   const BASE_ATTR = document.documentElement.getAttribute("data-base");
   const BASE = BASE_ATTR === null ? "/" : BASE_ATTR; // "" is valid: relative to this page
   const DATA_VERSION = document.documentElement.getAttribute("data-v") || "";
