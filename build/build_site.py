@@ -874,14 +874,14 @@ def build_404() -> str:
     <h1 class="display" style="font-size:clamp(2.4rem,7vw,5rem);margin:1rem 0">This page has <em>dissolved</em></h1>
     <p class="lede" style="margin:0 auto">The transmission you were looking for isn't here. Everything else is.</p>
     <div class="hero-cta" style="justify-content:center">
-      <a class="btn" href="/index.html">Return home</a>
-      <a class="btn btn-ghost" href="/shop.html">Shop all pieces</a>
+      <a class="btn" href="index.html">Return home</a>
+      <a class="btn btn-ghost" href="shop.html">Shop all pieces</a>
     </div>
   </div>
 </section>
 """
     return layout(
-        prefix="/",
+        prefix="",
         title="Not found · Light Scribe Atelier",
         description="Page not found.",
         body=body,
