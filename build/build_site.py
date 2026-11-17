@@ -12,7 +12,14 @@ FINE = json.loads((ROOT / "build" / "fineart.json").read_text())
 
 import hashlib
 
-DATA_VERSION = hashlib.sha1((ROOT / "data" / "catalog.json").read_bytes()).hexdigest()[:10]
+def _asset_version() -> str:
+    h = hashlib.sha1()
+    for rel in ("data/catalog.json", "assets/css/site.css", "assets/js/site.js"):
+        h.update((ROOT / rel).read_bytes())
+    return h.hexdigest()[:10]
+
+
+DATA_VERSION = _asset_version()
 
 DESIGNS = CATALOG["designs"]
 PRODUCTS = CATALOG["products"]
