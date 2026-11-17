@@ -106,7 +106,7 @@ def static_cards(products: list[dict], prefix: str = "") -> str:
         price = f"From {money(p['price'])}" if p["maxPrice"] > p["price"] else money(p["price"])
         out.append(
             f"""
-        <article class="card reveal">
+        <article class="card">
           <a class="card-media" href="{prefix}product.html?id={p['id']}" aria-label="{esc(p['title'])}">
             <img src="{p['image']}" alt="{esc(p['title'])}" loading="lazy" decoding="async">
             <span class="card-tag">{esc(p['type'])}</span>
@@ -654,7 +654,7 @@ def build_artwork(design: dict) -> str:
 
 def build_artwork_index() -> str:
     tiles = "".join(
-        f'<a class="design-tile reveal" href="{d["slug"]}.html"><img src="{d["image"]}" alt="{esc(d["name"])}" loading="lazy"><span>{esc(d["name"])} · {d["count"]}</span></a>'
+        f'<a class="design-tile" href="{d["slug"]}.html"><img src="{d["image"]}" alt="{esc(d["name"])}" loading="lazy"><span>{esc(d["name"])} · {d["count"]}</span></a>'
         for d in DESIGNS
     )
     body = f"""

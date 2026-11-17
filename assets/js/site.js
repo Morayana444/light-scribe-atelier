@@ -37,7 +37,7 @@
     const priceNote =
       p.maxPrice > p.price ? "From " + money(p.price) : money(p.price);
     return `
-      <article class="card reveal">
+      <article class="card">
         <a class="card-media" href="${u("product.html")}?id=${p.id}" aria-label="${esc(p.title)}">
           <img src="${img}" alt="${esc(p.title)}" loading="lazy" decoding="async">
           <span class="card-tag">${esc(p.type)}</span>
@@ -534,7 +534,7 @@
         el.innerHTML = slice
           .map(
             (d) => `
-          <a class="design-tile reveal" href="${u("artwork/" + d.slug + ".html")}">
+          <a class="design-tile" href="${u("artwork/" + d.slug + ".html")}">
             <img src="${d.image}" alt="${esc(d.name)}" loading="lazy">
             <span>${esc(d.name)}</span>
           </a>`

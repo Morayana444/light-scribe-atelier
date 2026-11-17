@@ -1052,3 +1052,12 @@ blockquote footer {
 .card-media { background: #efe7d8; }
 .pdp-main { background: #efe7d8; }
 .design-tile { background: #efe7d8; }
+
+/* cards animate on insertion, never hidden behind scroll observers */
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+.card { animation: cardIn 0.75s var(--ease) both; }
+.design-tile { animation: cardIn 0.75s var(--ease) both; }
+@media (prefers-reduced-motion: reduce) { .card, .design-tile { animation: none; } }
